@@ -25,6 +25,6 @@ jobs:
 
       - name: Running Tests
         working-directory: ./TestApp
-        run: npm run test -- --no-watch --no-progress
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
 
