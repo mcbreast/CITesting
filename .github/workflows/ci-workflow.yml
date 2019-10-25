@@ -11,10 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Dependencies
-      working-directory: TestApp
-      run: npm install
+      - name: Checkout
+        uses: actions/checkout@master
+      
+      - name: Set Node.js 10.x
+        uses: actions/setup-node@master
+        with:
+          version: 10.x
+      - name: Install Dependencies
+        working-directory: ./TestApp
+        run: npm install
 
-    - name: Build App
-      working-directory: TestApp
-      run: npm run build
+      - name: Build App
+        working-directory: ./TestApp
+        run: npm run build
