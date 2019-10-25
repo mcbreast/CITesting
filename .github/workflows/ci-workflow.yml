@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - name: Install Dependencies
-      working-directory: ./TestApp
+      working-directory: TestApp
       run: npm install
 
     - name: Build App
-      working-directory: ./TestApp
+      working-directory: TestApp
       run: npm run build
