@@ -12,6 +12,6 @@ jobs:
 
     steps:
     - name: Install Dependencies
-    - run: npm install
+      run: npm install
     - name: Build App
-    - run: ng build
+      run: ng build
