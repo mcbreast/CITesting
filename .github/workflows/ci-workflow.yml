@@ -18,10 +18,12 @@ jobs:
         uses: actions/setup-node@master
         with:
           version: 10.x
+
       - name: Install Dependencies
         working-directory: ./TestApp
         run: npm install
 
-      - name: Build App
+      - name: Running Tests
         working-directory: ./TestApp
-        run: npm run build
+        run: npm run test -- --no-watch --no-progress
+
