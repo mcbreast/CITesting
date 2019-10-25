@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout master
         uses: actions/checkout@master
       
       - name: Set Node.js 10.x
@@ -26,4 +26,5 @@ jobs:
       - name: Running Tests
         working-directory: ./TestApp
         run: npm run test -- --no-watch --no-progress
+
 
