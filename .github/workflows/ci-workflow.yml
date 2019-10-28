@@ -1,16 +1,11 @@
 name: CI
 
-on:
-  push:
-    paths-ignore:
+on: [push, pull_request]
+  paths-ignore:
     - '.github/**'
     - 'Documentation/**'
-
-    branches:
-    - master
-
-  pull_request:
-    branches:
+      
+  branches:
     - master
 
 jobs:
